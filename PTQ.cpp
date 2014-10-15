@@ -119,8 +119,18 @@ int main(){
                 cout << endl << endl;
                 break;
         }
-        index++;
+        //This way index represents number user inputs.
+        //This allows the printing loop below to print everything.
+        if(choice>0&&choice<4) index++;
+        
     } while ((choice != 4) && (index < 5));
+    
+    cout << "Results:" << endl << endl;
+    for(int i=0;i<index;i++){
+		pairArray[i]->Print();
+		cout << endl << endl;
+		delete pairArray[i];
+	}
  
  	return 0;
 }
